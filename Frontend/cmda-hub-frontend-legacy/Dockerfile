@@ -49,10 +49,8 @@ COPY . .
 # Ensure vite and other executables have execute permissions
 RUN chmod +x node_modules/.bin/*
 
-# RUN the build (this creates /app/dist)
-# RUN npm run build
-# RUN npm run generate-sitemap
-RUN npm run build || { echo 'Build failed'; cat /app/npm-debug.log; exit 1; }
+# Build the app
+RUN npm run build
 
 # Stage 2: Serve the frontend with a lightweight server
 FROM nginx:stable-alpine
