@@ -49,6 +49,11 @@ Frontend/node_modules/plotly.js/dist/plotly.js
 Frontend/node_modules/plotly.js/dist/plotly-strict.js
 Frontend/node_modules/.vite/deps/react-plotly__js.js.map
 Frontend/node_modules/.vite/deps/react-plotly__js.js
-home
+
+
+
+VITE_GOOGLE_CLIENT_ID="871166275678-r9u20t2t7bnvcv6pdablr50decg4rec7.apps.googleusercontent.com"
+
+VITE_GOOGLE_CLIENT_WWW_ID="871166275678-ru23ajd2b6qfumhvm7s6o6brea1tvqqm.apps.googleusercontent.com"
 
 
