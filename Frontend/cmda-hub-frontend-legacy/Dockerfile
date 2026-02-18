@@ -49,7 +49,8 @@ COPY . .
 # Ensure vite and other executables have execute permissions
 RUN chmod +x node_modules/.bin/*
 
-# Build the app
+# Build the app with increased memory limit
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN npm run build
 
 # Stage 2: Serve the frontend with a lightweight server

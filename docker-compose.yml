@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  # Redis Database (Matches spring.redis.host=cmda_redis in application.properties)
+  cmda_redis:
+    image: redis:latest
+    container_name: cmda_redis
+    ports:
+      - "6380:6380"
+    command: [ "redis-server", "--port", "6380" ]
+    volumes:
+      - redis_data:/data
+    restart: always
+
+  # Backend Service (Spring Boot)
+  backend:
+    build:
+      context: ./backend/cmda-hub-backend-legacy
+      dockerfile: Dockerfile
+    container_name: cmda-backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - cmda_redis
+    environment:
+      - SERVER_PORT=8080
+      - SPRING_REDIS_HOST=cmda_redis
+      - SPRING_REDIS_PORT=6380
+    volumes:
+      - ./backend/cmda-hub-backend-legacy/keystore:/app/keystore
+
+  # Frontend Service (Vite + Nginx)
+  frontend:
+    build:
+      context: ./Frontend/cmda-hub-frontend-legacy
+      dockerfile: Dockerfile
+    container_name: cmda-frontend
+    ports:
+      - "5174:5174"
+    depends_on:
+      - backend
+
+volumes:
+  redis_data:
