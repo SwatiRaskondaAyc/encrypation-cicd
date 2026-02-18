@@ -23,7 +23,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKER_USERNAME }}
+          username: swatiraskondaayc
           password: ${{ secrets.GITHUBACTIONSCCICD }}
 
       # 4. Extract short SHA for tagging
@@ -39,7 +39,7 @@ jobs:
           file: ./backend/cmda-hub-backend-legacy/Dockerfile
           push: ${{ github.event_name == 'push' }}
           tags: |
-            ${{ secrets.DOCKER_USERNAME }}/cmda-hub-backend:latest
-            ${{ secrets.DOCKER_USERNAME }}/cmda-hub-backend:${{ steps.vars.outputs.SHORT_SHA }}
+            swatiraskondaayc/cmda-hub-backend:latest
+            swatiraskondaayc/cmda-hub-backend:${{ steps.vars.outputs.SHORT_SHA }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
