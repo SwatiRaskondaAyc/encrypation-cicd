@@ -1,118 +1,10 @@
-// import React from 'react';
-// import chat from '../../public/chat.png'
-// import { useForm } from 'react-hook-form';
-// import Navbar from './Navbar';
-// import Footer from './Footer';
-// import axios from 'axios';
 
-// const Support = () => {
-//   const {
-//     register,
-//     handleSubmit,
-//     formState: { errors },
-//   } = useForm();
-//   const API_BASE = import.meta.env.VITE_URL
-
-   
-//     const onSubmit = async (data) => {
-//       try {
-//         const response = await axios.post(
-//           `${API_BASE}/support/support`,
-//           // 'http://192.168.1.250:8080/CMDA-3.3.9/api/support/support',
-//           // 'http://192.168.1.250:8080/api/support/support',
-
-//           // `${VITE_URL}/api/support/support`,
-//           {
-//             fullname: data.username, // Map the username input to fullname
-//             email: data.email,
-//             query: data.query,
-//           },
-//           { withCredentials: true }
-//         );
-//         console.log('Response:', response.data);
-//       } catch (error) {
-//         console.error('Error sending support query:', error);
-//       }
-//     };
-
-//   return (
-//     <div>
-      
-//       {/* Add padding to account for the navbar */}
-//       <div className="mt-20 my-10">
-//         <div className="card lg:card-side bg-base-100 shadow-xl p-5 dark:bg-slate-800 dark:text-white">
-//             <Navbar />
-//           <figure>
-//             <img
-//               className="w-[400px] h-[400px] object-cover"
-//               src={chat}
-//               alt="Contact"
-//             />
-//           </figure>
-//           <div className="card-body">
-//             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-//               <h2 className="card-title">
-//                 <span className="text-yellow-500">Let's</span> Connect!
-//               </h2>
-
-//               {/* Username Field */}
-//               <label className="block">
-//                 <span>Username:</span>
-//                 <div className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white">
-//                   <input
-//                     type="text"
-//                     className="grow"
-//                     placeholder="Enter your username"
-//                     {...register('username', { required: true })}
-//                   />
-//                   {errors.username && <span className="text-red-500">Required</span>}
-//                 </div>
-//               </label>
-
-//               {/* Email Field */}
-//               <label className="block">
-//                 <span>Email:</span>
-//                 <div className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white">
-//                   <input
-//                     type="email"
-//                     className="grow"
-//                     placeholder="Enter your email"
-//                     {...register('email', { required: true })}
-//                   />
-//                   {errors.email && <span className="text-red-500">Required</span>}
-//                 </div>
-//               </label>
-
-//               {/* Query Field */}
-//               <label className="block">
-//                 <span>Your Query:</span>
-//                 <textarea
-//                   placeholder="Enter your query here..."
-//                   className="textarea textarea-bordered w-full dark:bg-slate-900 dark:text-white"
-//                   {...register('query', { required: true })}
-//                 ></textarea>
-//                 {errors.query && <span className="text-red-500">Required</span>}
-//               </label>
-
-//               <div className="card-actions justify-end">
-//                 <button className="text-lg btn btn-block btn-warning">Send</button>
-//               </div>
-//             </form>
-//           </div>
-//         </div>
-//       </div>
-//       <Footer />
-//     </div>
-//   );
-// };
-
-// export default Support;
 
 
 
 
 import React from 'react';
-import chat from '../../public/chat.png';
+const chat = "/chat.png";
 import { useForm } from 'react-hook-form';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -147,7 +39,7 @@ const Support = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
       <Navbar />
-      
+
       <main className="flex-grow container mx-auto px-4 py-12 md:py-20">
         <div className="max-w-6xl mx-auto bg-white dark:bg-slate-700 rounded-2xl shadow-2xl overflow-hidden">
           <div className="flex flex-col lg:flex-row">
@@ -233,7 +125,7 @@ const Support = () => {
                         type="email"
                         className="block w-full pl-10 pr-3 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all"
                         placeholder="Enter your email"
-                        {...register('email', { 
+                        {...register('email', {
                           required: true,
                           pattern: {
                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
