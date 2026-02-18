@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "backend/cmda-hub-backend-legacy/**"
+      - ".github/workflows/backend-docker-build.yml"
   pull_request:
     branches: [main]
     paths:
       - "backend/cmda-hub-backend-legacy/**"
+      - ".github/workflows/backend-docker-build.yml"
 
 jobs:
   build-and-push:
