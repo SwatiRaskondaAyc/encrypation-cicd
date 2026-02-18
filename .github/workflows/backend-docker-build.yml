@@ -24,7 +24,7 @@ jobs:
         uses: docker/login-action@v3
         with:
           username: swatiraskondaayc
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.CICI_TEST }}
 
       # 4. Extract short SHA for tagging
       - name: Extract Git SHA
