@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+target/
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.iws
+*.iml
+*.ipr
+
+# Environment
+.env
+*.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Maven wrapper
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+*.log
+npm-debug.log*

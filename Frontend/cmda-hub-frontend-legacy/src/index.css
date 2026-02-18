@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Advent+Pro:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-weight: 300;
+}
+
+/* index.css */
+
+.btn-primary {
+  @apply flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500 text-white hover:bg-cyan-600 transition;
+}
+
+.btn-primary-gradient {
+  @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium shadow-md hover:from-cyan-600 hover:to-blue-600 transition-all duration-200;
+}
+
+/* *{
+     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+     } */
+* {
+  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
+
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif
+    font-family:Georgia, 'Times New Roman', Times, serif */
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* *
+{
+     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+} */
+
+/* *{font-family: 'Courier New', Courier, monospace;}
+
+ */
+/* 
+*{font-family:Verdana, Geneva, Tahoma, sans-serif} */
+/* *{font-family: 'Courier New', Courier, monospace;}
+*{font-family: 'Courier New', Courier, monospace;}
+*{font-family: 'Courier New', Courier, monospace;}
+*{font-family: 'Courier New', Courier, monospace;} */
+
+/* In Slider.css or a new file */
+
+.fancy-carousel-navigation {
+  display: none !important;
+}
+
+.fancy-carousel-indicators {
+  display: none !important;
+}
+
+.modal-right::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-right {
+  justify-content: flex-end !important;
+}
+
+.modal-right .modal-box {
+  margin-right: 0;
+  margin-left: auto;
+  height: 100vh;
+  border-radius: 0;
+}
+
+.joyride-tooltip {
+  z-index: 99999 !important;
+}
+
+.joyride-overlay {
+  z-index: 99998 !important;
+}
+
+.app.light {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.disable {
+  @apply pointer-events-none opacity-50 cursor-not-allowed;
+}
+
+.disable a {
+  @apply text-gray-400;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+    /* Start immediately without blank */
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* Only move half, since we duplicated items */
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  min-width: max-content;
+  animation: marquee 180s linear infinite;
+  /* Slower speed */
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Ignore system/browser dark mode */
+:root {
+  color-scheme: light;
+  /* tells browser: use light scrollbars, form controls, etc */
+}
+
+html {
+  background: #fff;
+  color: #000;
+}
+
+/* Optional: if you already have dark styles tied to prefers-color-scheme, override them */
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #fff !important;
+    color: #000 !important;
+  }
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  /* Light gray for light theme */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22D3EE;
+  /* Cyan color to match your theme */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06B6D4;
+  /* Slightly darker cyan on hover */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1e293b;
+  /* Darker track for dark theme */
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #22D3EE;
+  /* Cyan thumb for dark theme */
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+}
+
+/* Enhanced slider styles */
+.slider-thumb::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s ease;
+}
+
+.slider-thumb::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+}
+
+.slider-thumb::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #06b6d4);
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s ease;
+}
+
+.slider-thumb::-moz-range-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(59, 130, 246, 0.4);
+}
+
+/* Volume slider specific */
+.slider-thumb[style*="#10b981"]::-webkit-slider-thumb {
+  background: linear-gradient(135deg, #10b981, #34d399);
+  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+}
+
+.slider-thumb[style*="#10b981"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 6px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Scrollbar styling */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* PDF Export Styles */
+.pdf-only {
+  display: none;
+}
+
+.pdf-capture-mode .pdf-only {
+  display: block !important;
+}
+
+.pdf-page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+.pdf-avoid-break {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+/* Prevent plots and detailed sections from breaking */
+.pdf-chart-container,
+.pdf-chart-container>div,
+[data-pdf-section="graph-catalog"],
+[data-pdf-section="graph-catalog"]>div,
+[data-pdf-section="alpha-card-details"],
+[data-pdf-section="beta-card-details"],
+[data-pdf-section="metrics-card-details"],
+.plotly-graph-div {
+  page-break-inside: avoid !important;
+  break-inside: avoid !important;
+}
+
+.pdf-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 11px;
+  color: #1e293b;
+}
+
+.pdf-capture-mode .pdf-detail-table {
+  color: #1e293b !important;
+}
+
+.pdf-detail-table th {
+  background-color: #f1f5f9;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.pdf-detail-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pdf-chart-container {
+  min-height: 400px;
+  width: 100%;
+}
+
+/* Formula Styling */
+.formula-latex {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  margin: 0 0.3rem;
+}
+
+.frac .num {
+  border-bottom: 1px solid currentColor;
+  padding: 0 0.3rem 0.1rem;
+}
+
+.frac .den {
+  padding: 0.1rem 0.3rem 0;
+}
+
+/* Force light mode colors during PDF export */
+.pdf-capture-mode {
+  background-color: white !important;
+  color: #1e293b !important;
+}
+
+.pdf-capture-mode .bg-slate-800,
+.pdf-capture-mode .dark\:bg-slate-800,
+.pdf-capture-mode .bg-slate-900,
+.pdf-capture-mode .dark\:bg-slate-900 {
+  background-color: white !important;
+}
+
+.pdf-capture-mode .text-white,
+.pdf-capture-mode .dark\:text-white,
+.pdf-capture-mode .text-gray-100,
+.pdf-capture-mode .dark\:text-gray-100 {
+  color: #1e293b !important;
+}
+
+.pdf-capture-mode script {
+  display: none !important;
+}

@@ -1,0 +1,22 @@
+# --- Web Framework & API ---
+fastapi>=0.95.0
+uvicorn[standard]>=0.22.0
+python-multipart>=0.0.6     # For file uploads
+orjson>=3.9.0               # High-performance JSON serialization
+
+# --- Data Processing ---
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0             # For reading Excel (.xlsx) files
+xlrd>=2.0.1                 # For reading older Excel (.xls) files
+
+# --- Database & ORM ---
+SQLAlchemy>=2.0.0           # ORM
+pyodbc>=4.0.39              # ODBC driver for SQL Server
+
+# --- Visualization & Graphs ---
+plotly>=5.15.0              # Graph generation
+scikit-learn>=1.2.0         # Used in Risk Analysis (if retaining ML logic)
+
+# --- Utilities ---
+python-dotenv>=1.0.0        # For managing environment variables (DB creds)

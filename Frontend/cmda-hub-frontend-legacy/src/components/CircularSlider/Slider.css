@@ -1,0 +1,14 @@
+/* Add this to your global CSS file or inside a style tag */
+.fancy-carousel-indicator {
+    display: none !important; /* Hide circular indicators */
+  }
+  /* In Slider.css or a new file */
+
+.fancy-carousel-navigation {
+    display: none !important;
+  }
+  
+  .fancy-carousel-indicators {
+    display: none !important;
+  }
+  

@@ -1,0 +1,14 @@
+{
+  "individual": {
+    "JINDALSAW": {
+      "alpha": -0.502,
+      "expected_return": 0.1338,
+      "actual_return": -0.3682,
+      "benchmark_return": 0.1042,
+      "risk_free_rate": 0.0662,
+      "beta_used": 1.7774,
+      "error": null
+    }
+  },
+  "portfolio_alpha": 0.0
+}

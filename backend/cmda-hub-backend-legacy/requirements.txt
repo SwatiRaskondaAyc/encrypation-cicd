@@ -1,0 +1,34 @@
+# Babel
+# Flask
+# matplotlib
+# nselib
+# nsepython
+# numpy
+# pandas
+# plotly
+# python_dateutil
+# scikit_learn
+# yfinance
+
+Babel
+contourpy
+dash
+#Flask
+fsspec
+gtts
+matplotlib
+numpy
+pandas
+pandas-flavor>=0.5
+plotly
+pygame
+pyodbc
+python_dateutil==2.9.0.post0
+scikit_learn
+scipy
+torch
+sqlalchemy
+requests
+python-dotenv
+
+

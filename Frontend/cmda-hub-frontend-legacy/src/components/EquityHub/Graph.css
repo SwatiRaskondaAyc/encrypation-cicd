@@ -1,0 +1,53 @@
+.slick-prev, .slick-next {
+    background-color: #333; /* Dark background */
+    border-radius: 100%; /* Circular arrows */
+    color: #0e0d0d; /* White arrows */
+    /* padding: 10px; */
+    font-size: 18px;
+    /* z-index: 10; */
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    background-color: #f39c12; /* Hover effect 
+  }
+
+  .graph-slider-container {
+    width: 100%;
+    height: 100%;
+    padding: 0; /* Make sure there's no extra padding */
+  }
+  
+  .slider-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .graph-container {
+    width: 100%; /* Ensure it takes the full width */
+    height: 100%; /* Ensure it takes the full height available */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slide-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ensure full width */
+    height: 100%; /* Ensure full height */
+  }
+  
+  .graph-container {
+    width: 100%; /* Make sure the container is full width */
+    height: 100%; /* Ensure the container is full height */
+    max-width: 100%; /* Remove max-width constraint if any */
+    max-height: 100%; /* Remove max-height constraint if any */
+  }
+
+  .graph-container {
+    height: auto; /* Allow it to adjust based on content */
+    max-height: 90vh; /* Optional: limit the max height */
+  }
+  

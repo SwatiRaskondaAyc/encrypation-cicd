@@ -1,0 +1,54 @@
+# Node.js
+node_modules/
+npm-debug.log
+Frontend/node_modules/
+Frontend_Management/node_modules/
+Frontend/node_modules/.vite/
+src/components/Portfolio_pdf/
+
+# Maven (Java)
+target/
+*.jar
+*.war
+*.ear
+Frontend/CMDA_project/Registration/target/
+
+# Logs
+*.log
+logs/
+
+# Environment files
+.env
+
+# Temporary files
+tmp/
+*.tmp
+*.bak
+
+# Large media and archives
+*.mp4
+*.avi
+*.zip
+*.tgz
+*.pdf
+*.jpg
+*.png
+*.avif
+
+EquityHub.zip
+Frontend/dist/assets/*.mp4
+Frontend/public/*.mp4
+archive.tgz
+Frontend/CMDA_project/Registration/target/Registration-0.0.1-SNAPSHOT.jar
+Frontend_Management/node_modules/@esbuild/win32-x64/esbuild.exe
+Frontend/dist/assets/Search_tutorial-uX0tjWoW.mp4
+Frontend/src/components/EquityHub/Search_tutorial.mp4
+Frontend/src/components/EquityHub.zip
+Frontend/node_modules/plotly.js/dist/plotly-with-meta.js
+Frontend/node_modules/plotly.js/dist/plotly.js
+Frontend/node_modules/plotly.js/dist/plotly-strict.js
+Frontend/node_modules/.vite/deps/react-plotly__js.js.map
+Frontend/node_modules/.vite/deps/react-plotly__js.js
+home
+
+

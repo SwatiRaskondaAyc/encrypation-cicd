@@ -1,0 +1,1473 @@
+/* custom.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #333; /* Dark text for readability */
+}
+
+.container {
+  
+  width: 100%;
+}
+
+
+.header_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* White background for the navbar */
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays above other elements */
+  padding: 25px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+}
+
+/* Logo styling */
+.header_logo img {
+  height: 50px; /* Adjust logo size */
+  width: auto;
+}
+
+/* Navigation styling */
+nav {
+  display: flex; 
+}
+
+.header_menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.header_menu li {
+  margin-left: 5px; /* Space between menu items */
+}
+
+.header_menu li a {
+  text-decoration: none;
+  color: #333; /* Dark color for the text */
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.header_menu li a:hover {
+  color: #007BFF; /* Change text color on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Add a background color on hover */
+  border-radius: 5px;
+}
+
+/* Active menu item styling */
+.header_menu li.active a {
+  color: #007BFF; /* Active link color */
+}
+
+/* Flex row layout */
+.flex-row {
+  display: flex;
+  align-items: center;
+
+}
+
+/* Adjust the navbar spacing for smaller screens */
+@media (max-width: 768px) {
+  .header_menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_menu li {
+    margin: 10px 0; /* Adjust space between menu items in vertical layout */
+  }
+
+  .header_logo img {
+    height: 30px; /* Resize logo for smaller screens */
+  }
+}
+#google_translate_element {
+  position: absolute;
+  margin-top: -60rem;
+  left: 10px;
+}
+
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Header Styles */
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 155px 55px;
+  
+}
+
+.hero-content {
+  max-width: 45%; 
+  color: #333;
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hero-content .btn {
+  background-color: #1975ff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-image img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content,
+  .hero-image {
+    max-width: 100%;
+  }
+}
+
+/* End of section 2 */
+
+/* Subscribe Tab Styling */
+.subscribe-tab {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.subscribe-tab button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  margin: 100px auto;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Plan Box Styling */
+.plan-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 10% auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Plan Boxes */
+.plan-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.plan-box {
+  width: 45%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.plan-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+.plan-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.plan-box h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.plan-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+.subscribe-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+/* Start of descriptive  */
+
+.autocomplete-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 25px;
+  border: 1px solid #020202;
+  max-height: 200px;
+  overflow-y: auto;
+  position: absolute;
+  width: 84%;
+  background-color: #1a1a1a;
+  z-index: 1;
+}
+
+.autocomplete-list li {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 8px; */
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.autocomplete-list li:hover {
+  background-color: #727272;
+}
+
+.stock-name {
+  text-align: left;  
+}
+
+.stock-symbol {
+  text-align: right;
+}
+
+
+/* General styling for the container */
+.analysis-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between sections */
+}
+
+.analysis-container h2 {
+  margin-bottom: 20px; /* Add spacing after h2 */
+}
+
+.market-summary h5 {
+  margin-bottom: 5px; /* Spacing between h5 and the statement */
+}
+
+.market-summary .stmt {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0a0a0a;
+  margin-bottom: 15px; /* Spacing after statement */
+  display: block;
+  text-align: center;
+}
+
+.ltp-container {
+  font-size: 24px;
+  /* font-weight: bold; */
+  /* margin-bottom: 15px; */
+}
+
+.ltp-container .inr {
+  font-size: 16px; /* Smaller font size for INR */
+  vertical-align: bottom; /* Position INR as a subscript-like style */
+}
+
+.comparison {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* margin-bottom: 15px; Space below comparison */
+}
+
+.prev-close{
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.metric {
+  font-size: 16px;
+}
+
+.metric.positive {
+  color: #0fab01;
+}
+
+.metric.negative {
+  color: #e90e0e;
+}
+
+/* General styling for the sections container */
+.summary-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px; /* Space between each section */
+}
+
+/* Section 1 styling */
+.section-1 {
+  flex: 1; /* Allows flexibility in width */
+  padding-right: 10px; /* Adds some padding to the right */
+  border-right: 1px solid #ddd; /* Adds a separator */
+}
+
+/* Metric Wrapper to use CSS Grid for alignment */
+.section-1 .metric-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Two columns: labels (auto width) and metrics (flexible width) */
+  gap: 10px; /* Space between the label and metric */
+}
+
+.section-1 p {
+  display: contents; /* Use display contents to apply grid on p elements */
+}
+
+/* Section 2 styling */
+.section-2 {
+  flex: 1; /* Allows flexibility in width */
+  padding: 0 10px; /* Adds padding on both sides */
+}
+
+/* Section 3 styling */
+.section-3 {
+  flex: 1; /* Allows flexibility in width */
+  padding-left: 10px; /* Adds padding to the left */
+  border-left: 1px solid #ddd; /* Adds a separator */
+}
+
+/* Metric styling */
+.metric {
+  font-weight: bold;
+  color: #1a1a1a; /* Styling for metric values */
+}
+
+/* Add this to your CSS */
+.metric-label {
+  font-family:'Lato';
+  font-weight: bold;
+  color: #4f504f; /* Replace with your desired color */
+}
+
+
+
+/* Container for the market summary and right section gauge */
+.content-container {
+  display:inline-block; /* Enables flexbox to align children horizontally */
+  gap: 20px; /* Space between the market-summary and right-section-gauge */
+  align-items: flex-start; /* Aligns items to the top */
+  margin-top: 20px; /* Adds space above the container */
+}
+
+/* Styling for the right-section-gauge */
+.right-section-gauge {
+  flex: 1; /* Allows flexibility in width */
+  padding: 15px;
+  background-color: #f9f9f9; /* Similar background color as market-summary */
+  border: 1px solid #ddd; /* Border to match market-summary */
+  border-radius: 10px; /* Rounded corners to match market-summary */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle 3D effect */
+}
+
+/* Styling for the header and paragraphs */
+.right-section-gauge h4 {
+  font-size: 1.2em; /* Size similar to other headers */
+  margin-bottom: 10px; /* Space below the header */
+  color: #1a1a1a;
+}
+
+.right-section-gauge p {
+  font-size: 0.95em;
+  color: #1a1a1a;
+  line-height: 1.5;
+}
+
+/* Metric styling similar to other metrics */
+.right-section-gauge .metric {
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* Styling for the delivery-rate-gauge */
+.delivery-rate-gauge {
+  margin-top: 15px; /* Space above the gauge */
+  text-align: center; /* Center align the gauge content */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content-container {
+      flex-direction: column; /* Stacks the boxes vertically on small screens */
+  }
+
+  .market-summary,
+  .right-section-gauge {
+      margin-bottom: 15px; /* Space between stacked boxes */
+  }
+}
+
+
+
+/* Styling for plot containers */
+.plots-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows of plots */
+  width: 95%; /* Ensure it takes full width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Center plot */
+.plot-center {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  text-align: center;
+  padding: 15px;
+  background-color: #f9f9f9; /* Consistent background color */
+  border: 1px solid #ddd; /* Consistent border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Consistent box shadow */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Row of plots */
+.plot-row {
+  display: flex;
+  flex: 1;
+  gap: 20px; /* Space between plots in the same row */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Individual plot styling */
+.plot {
+  flex: 1; /* Allows flexibility in width */
+  padding: 15px;
+  background-color: #f9f9f9; /* Same background color */
+  border: 1px solid #ddd; /* Same border */
+  border-radius: 10px; /* Same border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Same box shadow */
+  overflow: hidden; /* Hide overflow content */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Specific plot sizes */
+.candle-spread, .last-traded-price {
+  text-align: center;
+  flex: 1; /* Equal width for both plots */
+  max-width: 100%; /* Ensure they don't exceed container width */
+}
+
+
+/* Individual plot styling */
+.plot {
+  flex: 1; /* Allows flexibility in width */
+  padding: 15px;
+  background-color: #f9f9f9; /* Same background color */
+  border: 1px solid #ddd; /* Same border */
+  border-radius: 10px; /* Same border radius */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Same box shadow */
+  overflow: auto; /* Hide overflow content */
+  overflow: hidden;
+}
+
+
+.plot h3 {
+  font-size: 1.1em; /* Font size for plot titles */
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+/* Specific styles for individual plots */
+.candle-spread {
+  max-width: 100%; /* Adjust width as needed */
+  max-height: 600px; /* Adjust height as needed */
+}
+
+.last-traded-price {
+  max-width: 50%; /* Adjust width as needed */
+  max-height: 600px; /* Adjust height as needed */
+}
+
+.plot-content {
+  text-align: center; /* Center align plot content */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .plot-row {
+      flex-direction: column; /* Stack plots vertically on small screens */
+      gap: 15px; /* Space between stacked plots */
+  }
+
+  .candle-spread,
+  .last-traded-price {
+      max-width: 100%; /* Full width on small screens */
+  }
+}
+
+
+/* Disclaimer Box Styling */
+.disclaimer-box {
+  background-color: #f2ead2; /* Light yellow background */
+  color: #856404; /* Dark yellow text */
+  border: 1px solid #fbf3dd;
+  padding: 15px;
+  border-radius: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+
+
+/* General container styling */
+.market-summary {
+  background-color: #f5f5f5;
+  flex:1;
+  margin: 20px auto;  /* Auto centers the box with a small top/bottom margin */
+  box-sizing:content-box;  /* Ensures padding is included in the width */
+  padding: 20px;
+  border: 1px solid #ddd; /* Border to match market-summary */
+  border-radius: 10px; /* Rounded corners to match market-summary */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
+  width: 95%;
+  height: auto;
+}
+
+
+.trade-delivery-box {
+  background-color: #f5f5f5;
+  flex: 1;
+  margin: 20px auto;  /* Auto centers the box with a small top/bottom margin */
+  box-sizing: content-box;  /* Ensures padding is included in the width */
+  padding: 20px;
+  border: 1px solid #ddd; /* Border to match market-summary */
+  border-radius: 10px; /* Rounded corners to match market-summary */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle 3D effect */
+  width: 95%;
+  
+  /* Flexbox for centering */
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  align-items: center;     /* Center items horizontally */
+  text-align: center;      /* Center the text */
+}
+
+
+
+
+.market-summary h5 {
+  text-align: center;
+}
+
+
+/* Flexbox container for rows of metrics */
+.metrics-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space between columns */
+  gap: 20px; /* Optional: gap between columns */
+  margin-bottom: 15px; /* Spacing between rows */
+  border-bottom: 1px solid #ddd; /* Line between rows */
+  padding-bottom: 10px; /* Padding to add space at the bottom of each row */
+}
+
+/* Column styling */
+.metrics-column {
+  flex: 1; /* Each column takes equal space */
+  padding-right: 10px;
+  border-right: 1px solid #ddd; /* Vertical line between columns */
+  word-wrap: break-word; /* Ensures long words wrap */
+}
+
+.metrics-column:last-child {
+  border-right: none; /* Remove the last column's right border */
+}
+
+/* Style for the individual metric */
+.metric {
+  /* font-weight: bold; */
+  color: #1a1a1a;
+}
+
+.metric-heading {
+  font-weight: bold;
+  color: #1a1a1a;
+  font-size: x-large;
+}
+
+
+/* Grid layout for metrics */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust to fit content */
+  gap: 15px; /* Space between grid items */
+  margin-top: 20px;
+}
+
+/* Individual metric item */
+.metric-item {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Include padding and border in width */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align content */
+  text-align: center; /* Center align text */
+}
+
+/* Metric heading styling */
+.metric-item h4 {
+  margin: 0 0 10px 0; /* Margin below heading */
+  font-size: 1.2em; /* Adjust font size as needed */
+  color: #333; /* Heading color */
+}
+
+/* Metric value styling */
+.metric-item p.metric {
+  font-size: 1.1em; /* Adjust font size as needed */
+  margin: 0;
+  font-weight: bold; /* Bold text for values */
+  color: #1a1a1a; /* Value color */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .metrics-row {
+      flex-direction: column; /* Stack the columns vertically on small screens */
+      gap: 15px;
+      border-bottom: none; /* Remove lines between stacked rows */
+  }
+  
+  .metrics-column {
+      border-right: none; /* Remove borders for stacked columns */
+      padding-right: 0;
+  }
+}
+
+
+.comment-content {
+  height: 25%;            /* Takes 1/4 of the available height */
+  padding: 10px;          /* Adds some space around the text */
+  font-size: 1rem;        /* Sets a readable font size */
+  word-wrap: break-word;  /* Ensures long words break into the next line */
+  line-height: 1.5;       /* Adjusts line spacing for readability */
+  overflow-y: auto;       /* Adds a vertical scrollbar if the comment overflows */
+  background-color: #f9f9f9; /* Light background to distinguish from the plot */
+  border-top: 1px solid #ddd; /* Adds a subtle border to separate from the plot */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width/height */
+}
+
+
+
+.plot-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px; /* Space between plots in the same row */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+
+.plot.candle-spread {
+  width: auto;
+  max-width: 50%; /* Ensures it does not exceed 50% of the parent container's width */
+  font-size: 1rem;
+  word-wrap: break-word;
+  padding-top: 10px;
+}
+
+
+.plot.last-traded-price {
+  width: 50%; /* Ensures it takes the remaining 50% of the parent container's width */
+  font-size: 1rem;
+  /* word-wrap: break-word; */
+  line-height: 1.5;
+
+}
+.comment-box {
+  height: auto; /* Adjust this height as per your requirement */
+  width: auto;
+  overflow:auto;
+  text-align: center;
+  align-items:center;
+
+}
+
+
+.comment-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+  height: auto; /* Ensure the height expands to fit content */
+  width: auto;
+  white-space: normal; /* Allow the text to wrap to multiple lines */
+  word-wrap: break-word; /* Ensure long words break and don't overflow */
+  overflow: visible; /* Prevent any hidden or cut-off text */
+  text-align: justify;
+  align-items: center;
+}
+
+/* End of section 2 */
+
+/* Styling for the main heading */
+.main-heading {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+} 
+
+/* portfolio service */
+.portfolio-services {
+  position: relative; /* To position the image properly */
+  width: 50%; /* Ensure the section takes full width */
+  height: 50vh; /* Full viewport height or adjust as needed */
+  overflow: hidden; /* Hide any overflow */
+}
+
+.portfolio-services img {
+  position: absolute;
+  top: 50%;
+  left: 7rem;  /* Start from the left */
+  width: 60%;
+  height: 100%;
+  
+  margin-right: 25rem;
+  object-fit: cover;
+  transform: translateY(-50%);
+  
+  /* Add subtle shadow for depth */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  
+  /* Smooth border-radius for rounded corners */
+  border-radius: 15px;
+  
+  /* Optional: Apply a slight contrast increase or saturation change */
+  filter: contrast(1.2) saturate(1.1);
+  
+  /* Optional: Add a smooth transition effect for hover */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect to add interactivity */
+.portfolio-services img:hover {
+  transform: translateY(-50%) scale(1.05);  /* Zoom effect */
+  filter: contrast(1.3) saturate(1.2);  /* Boost contrast and saturation */
+}
+
+
+/* Page Heading */
+.page-heading {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-image: url('/static/assets/images/portf_bg.jpg');
+  background-size: cover; /* Ensure the background image covers the header */
+  background-position: center; /* Center the background image */
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  background-attachment: fixed; /* Optional: makes the background stay fixed on scroll */
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Optional: adds some depth */
+}
+
+.page-heading h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* Container for the content */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Disclaimer Box */
+.disclaimer-box {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  padding: 15px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.disclaimer-box i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+/* File Upload Form */
+.file-upload-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-upload-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.file-input {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.file-input:focus {
+  border-color: #1a73e8;
+  outline: none;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+}
+
+/* Upload Button */
+.upload-button {
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #155a8a;
+}
+
+.upload-button:focus {
+  outline: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+      padding: 20px;
+  }
+
+  .file-upload-form {
+      padding: 20px;
+  }
+
+  .file-upload-label {
+      font-size: 16px;
+  }
+
+  .upload-button {
+      width: 100%;
+      padding: 14px;
+  }
+}
+
+/* Message styling */
+.message-box {
+  width: 100%;
+  text-align: center;
+}
+
+/* Column Names Styling */
+.column-names {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.sample-upload-form {
+  margin-top: 40px; /* Adjust this value as needed for spacing */
+}
+
+/* File Preview Table Styling */
+.file-preview-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.file-preview-table th, .file-preview-table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.file-preview-table th {
+  background-color: #007bff; /* Blue background */
+  color: #f1f1f1; /* White text */
+}
+
+.file-preview-table td {
+  background-color: #f1f1f1; /* Light gray background */
+  color: #000000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-heading {
+    font-size: 2rem;
+  }
+  
+  .file-upload-form {
+    padding: 15px;
+  }
+
+  .file-preview-table th, .file-preview-table td {
+    padding: 8px;
+  }
+}
+
+
+/*             */
+
+/* Mapping Form Heading */
+.mapping-form-heading {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Column Mapping Form Styling */
+.column-mapping-form {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.mapping-label {
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.info-button {
+  font-size: 12px;
+  background-color: #ddd;
+  color: #333;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.info-button::after {
+  content: attr(title);
+  position: absolute;
+  left: 50%;
+  top: 130%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.info-button:hover::after {
+  opacity: 1;
+}
+
+.feature-select {
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Analyze Button Styling */
+.analyze-button {
+  background-color: #28a745; /* Green background */
+  color: #fff;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.analyze-button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive adjustments for form */
+@media (max-width: 768px) {
+  .mapping-form-heading {
+    font-size: 1.25rem;
+  }
+
+  .column-mapping-form {
+    padding: 15px;
+  }
+
+  .feature-select {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+.analysis-container {
+  background-color: white; 
+  padding: 20px;           
+  border-radius: 8px;     
+  margin-top: 20px;       
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.portfolio-results {
+  display: flex;            
+  justify-content: space-between; 
+  margin-top: 50px;
+  margin-bottom: 50px;      
+}
+
+.portfolio-section {
+  text-align: center;      
+  flex: 1;                 
+  padding: 10px;           
+  border-right: 1px solid #ccc; 
+}
+
+.portfolio-section:last-child {
+  border-right: none;      
+}
+
+.portfolio-section h4 {
+  margin-bottom: 10px;     
+  font-size: 1.5em;        
+  color: #2f2f2f;              
+}
+
+.portfolio-section p {
+  font-size: 1.9em;         
+  font-weight: bold;        
+}
+
+.pnl-value {
+  font-size: 1.2em;        
+  font-weight: bold;        
+}
+
+.portfolio-snippet {
+  margin-top: 20px;         
+  border: 1px solid #ddd;   
+  border-radius: 5px;       
+  padding: 10px;            
+  background-color: #f9f9f9; 
+}
+
+.portfolio-insights {
+  margin-top: 20px;        
+  padding: 10px;            
+}
+
+.table-striped {
+  width: 100%;              
+  border-collapse: collapse;
+}
+
+.table-striped th, .table-striped td {
+  border: 1px solid #ddd;  
+  padding: 8px;             
+  text-align: left;         
+}
+
+.table-striped tr:nth-child(even) {
+  background-color: #f2f2f2; 
+}
+
+.table-striped tr:hover {
+  background-color: #ddd;   
+}
+
+.table-striped th {
+  padding-top: 12px;       
+  padding-bottom: 12px;    
+  background-color: #4CAF50; 
+  color: white;            
+
+}
+
+
+/* the current insights value styles */
+.portfolio-results {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.portfolio-section {
+  text-align: center; 
+  padding: 10px;
+}
+
+.portfolio-section h4 {
+  margin-bottom: 5px; 
+}
+
+.portfolio-section p {
+  font-size: 1.4em; 
+  margin: 0; 
+}
+
+.pnl-value {
+  font-weight: bold;
+  font-size: 1.4em; 
+}
+
+.portfolio-section p.sub {
+  font-size: 1.2em; 
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Portfolio Section Styles */
+.portfolio-services {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.portfolio-services img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+#modern-footer {
+  background-color: #002b45;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-logo-about {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo-about h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-logo-about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.subscribe-button {
+  background-color: #00bfae;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #00a99f;
+}
+
+/* Footer Links */
+.footer-links {
+  flex: 1;
+  max-width: 250px;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00bfae;
+}
+
+/* Footer News */
+.footer-news {
+  flex: 1;
+  max-width: 250px;
+}
+
+.footer-news h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-news ul {
+  list-style: none;
+}
+
+.footer-news ul li {
+  margin-bottom: 10px;
+}
+
+.footer-news ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-news ul li a:hover {
+  color: #00bfae;
+}
+
+/* Footer Contact */
+.footer-contact {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-contact h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bfae;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-about, .footer-links, .footer-news, .footer-contact {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo-about h3 {
+    font-size: 24px;
+  }
+
+  .footer-links h4, .footer-news h4, .footer-contact h4 {
+    font-size: 18px;
+  }
+
+  .footer-links ul li a, .footer-news ul li a {
+    font-size: 14px;
+  }
+}

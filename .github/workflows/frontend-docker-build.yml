@@ -1,0 +1,49 @@
+name: Build & Push Frontend Docker Image
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Frontend/cmda-hub-frontend-legacy/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "Frontend/cmda-hub-frontend-legacy/**"
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Docker Buildx for efficient multi-stage builds
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # 3. Log in to Docker Hub
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      # 4. Extract short SHA for tagging
+      - name: Extract Git SHA
+        id: vars
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
+
+      # 5. Build and push the Docker image
+      - name: Build and Push Frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./Frontend/cmda-hub-frontend-legacy
+          file: ./Frontend/cmda-hub-frontend-legacy/Dockerfile
+          push: ${{ github.event_name == 'push' }}
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/cmda-hub-frontend:latest
+            ${{ secrets.DOCKER_USERNAME }}/cmda-hub-frontend:${{ steps.vars.outputs.SHORT_SHA }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max

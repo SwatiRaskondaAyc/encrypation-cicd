@@ -1,0 +1,10 @@
+Babel
+Flask
+matplotlib
+nselib
+nsepython
+numpy
+pandas
+plotly
+python_dateutil
+scikit_learn

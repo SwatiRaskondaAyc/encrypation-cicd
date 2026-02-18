@@ -1,0 +1,173 @@
+/* ========================================
+   PDF Export Styles
+   Prevents orphans, widows, and improves print layout
+   ======================================== */
+
+/* Global Print Settings */
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Prevent Orphans and Widows */
+.pdf-content,
+.pdf-content p,
+.pdf-content div,
+.pdf-content section {
+    orphans: 3;
+    /* Minimum 3 lines at bottom of page */
+    widows: 3;
+    /* Minimum 3 lines at top of page */
+}
+
+/* Page Break Controls */
+.page-break-before {
+    page-break-before: always;
+    break-before: page;
+}
+
+.page-break-after {
+    page-break-after: always;
+    break-after: page;
+}
+
+.page-break-inside-avoid,
+.pdf-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Specific Component Page Breaks */
+.cover-page {
+    page-break-after: always;
+    break-after: page;
+}
+
+.table-of-contents {
+    page-break-after: always;
+    break-after: page;
+}
+
+.glossary-page {
+    page-break-before: always;
+    break-before: page;
+}
+
+/* Section Headers - Keep with content */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    page-break-after: avoid;
+    break-after: avoid;
+    orphans: 3;
+    widows: 3;
+}
+
+/* Tables - Prevent breaking inside */
+table {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Cards and Panels */
+.summary-card,
+.alpha-card,
+.beta-card,
+.metrics-card,
+.graph-container {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    orphans: 3;
+    widows: 3;
+}
+
+/* Ensure minimum content before page break */
+.pdf-section {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    min-height: 200px;
+    /* Adjust as needed */
+}
+
+/* Prevent single line at top of page */
+.pdf-paragraph {
+    orphans: 3;
+    widows: 3;
+    min-height: 3em;
+    /* Minimum 3 lines */
+}
+
+/* Chart containers should stay together */
+.plotly-graph-container,
+.chart-wrapper {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 2rem;
+}
+
+/* Modal details in PDF */
+.modal-content-pdf {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+}
+
+/* Holdings table rows */
+.holdings-row {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Grid layouts in PDF */
+.pdf-grid {
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+/* Ensure proper spacing between sections */
+.pdf-section-title {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+/* Print-specific visibility */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    .print-only {
+        display: block !important;
+    }
+
+    /* Remove shadows for better print quality */
+    .shadow-lg,
+    .shadow-xl,
+    .shadow-2xl {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+/* Screen-specific (hide print-only content on screen) */
+@media screen {
+    .print-only {
+        display: none !important;
+    }
+}

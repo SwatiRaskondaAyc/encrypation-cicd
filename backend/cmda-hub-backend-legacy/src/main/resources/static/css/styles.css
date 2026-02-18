@@ -1,0 +1,582 @@
+
+/* Basic Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Font Settings */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #333; /* Dark text for readability */
+}
+
+.container {
+  width: 100%;
+}
+
+
+.header_logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; 
+  padding: 25px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.header_logo img {
+  height: 50px; 
+  width: auto;
+ 
+}
+
+
+nav {
+  display: flex; 
+}
+
+.header_menu {
+  display: flex;
+  list-style-type: none;
+  margin-right: 17rem;
+}
+
+.header_menu li {
+  margin-left: 5px; /* Space between menu items */
+}
+
+.header_menu li a {
+  text-decoration: none;
+  color: #333; /* Dark color for the text */
+  margin-left: 2rem;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.header_menu li a:hover {
+  color: #007BFF; /* Change text color on hover */
+  background-color: rgba(0, 123, 255, 0.1); /* Add a background color on hover */
+  border-radius: 5px;
+}
+
+/* Active menu item styling */
+.header_menu li.active a {
+  color: #007BFF; /* Active link color */
+}
+
+/* Flex row layout */
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust the navbar spacing for smaller screens */
+@media (max-width: 768px) {
+  .header_menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header_menu li {
+    margin: 10px 0; 
+  }
+
+  .header_logo img {
+    height: 30px; 
+  }
+}
+#google_translate_element {
+  position: fixed; 
+  top: 30px; 
+  right: 10px; 
+  background-color: rgba(0, 0, 0, 0.8); 
+  border-radius: 8px; 
+  padding: 10px 20px;
+  color: #fff; 
+  font-size: 14px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  z-index: 9999; 
+  transition: all 0.3s ease; 
+}
+
+#google_translate_element:hover {
+  transform: translateY(-5px); 
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.goog-te-combo {
+  background-color: rgba(255, 255, 255, 0.9); /* Lighter background for the dropdown */
+  border: 1px solid #ccc; /* Border around the dropdown */
+  border-radius: 4px; /* Rounded corners for the dropdown */
+  padding: 5px 10px; /* Padding inside the dropdown */
+  font-size: 14px; /* Consistent font size */
+  color: #333; /* Text color for dropdown */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.goog-te-combo:hover {
+  background-color: #f1f1f1; /* Slightly lighter background when hovered */
+}
+
+/* Optional: Hide the default translation dropdown if needed */
+.goog-te-banner-frame {
+  display: none !important; /* Hides the default translation banner */
+}
+
+/* Adjust styling for smaller screens (optional) */
+@media (max-width: 768px) {
+  #google_translate_element {
+    top: 10px; /* Reduce the space from the top on smaller screens */
+    right: 10px; /* Adjust the right position on mobile */
+    font-size: 12px; /* Slightly smaller font size for mobile */
+    padding: 8px 12px; /* Less padding on smaller screens */
+  }
+
+  .goog-te-combo {
+    font-size: 12px; /* Adjust dropdown font size for smaller screens */
+  }
+}
+
+/* Hero Section */
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin-top: -30rem;
+  padding: 100px 50px;
+  background: linear-gradient(135deg, #ffffff, #f1faff);
+  color: white;
+}
+
+.hero_content {
+  flex: 10;
+}
+
+.hero_content .title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+.hero_content .subtitle {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.hero_image img {
+  max-width: 100%;
+  object-fit: cover;
+  margin-left: 5rem;
+  
+}
+
+/* About Section */
+#about {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  margin-top: 37rem;
+}
+
+.section-subheading {
+  font-size: 18px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 10rem;
+  margin-bottom: 10px;
+  margin-left: 5rem;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 20px;
+  border: 2px solid #444;
+  border-radius: 50px;
+  background-color: #f4f4f4;
+}
+
+/* Main Heading Styles */
+.section-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: capitalize;
+  position: relative;
+}
+
+/* Adding a decorative line under the heading */
+.section-heading::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #007bff; /* Blue line */
+  border-radius: 5px;
+}
+
+/* Text Centering with Animation */
+.text-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Adding a subtle fade-in animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.section-subheading, .section-heading {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature_icon i {
+  font-size: 40px;
+  margin-bottom: 20px;  
+}
+
+.feature_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.feature_text {
+  font-size: 16px;
+  color: #555;
+}
+
+.feature a {
+  margin-top: 20px;
+  display: inline-block;
+  background-color: #fe6786;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.feature a:hover {
+  background-color: #e55577;
+}
+
+/* Services Section */
+#services {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.services {
+  display: flex;  
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.service {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+ 
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service_icon img {
+  max-width: 50px;
+  margin-bottom: 20px;
+}
+
+.services_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.service_text {
+  font-size: 16px;
+  color: #555;
+}
+
+.arrow-icon {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fe6786;
+}
+
+.arrow-icon:hover {
+  color: #e55577;
+}
+
+/* News and Insights Section */
+#news-insights {
+  padding: 80px 20px;
+  background-color: #f0f0f0;
+}
+
+.news-sections {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.news-section {
+  width: 48%;
+}
+
+.news-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.news-section p {
+  font-size: 16px;
+  color: #555;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background-color: #fe6786;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.read-more-btn:hover {
+  background-color: #e55577;
+}
+
+/* Footer Styling */
+#modern-footer {
+  background-color: #002b45;
+  color: white;
+  padding: 40px 20px;
+  margin-top: 5rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 20px;
+}
+
+.footer-logo-about {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-logo-about h3 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-logo-about p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.subscribe-button {
+  background-color: #00bfae;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #00a99f;
+}
+
+/* Footer Links */
+.footer-links {
+  flex: 1;
+  max-width: 250px;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #00bfae;
+}
+
+/* Footer News */
+.footer-news {
+  flex: 1;
+  max-width: 250px;
+}
+
+.footer-news h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-news ul {
+  list-style: none;
+}
+
+.footer-news ul li {
+  margin-bottom: 10px;
+}
+
+.footer-news ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-news ul li a:hover {
+  color: #00bfae;
+}
+
+/* Footer Contact */
+.footer-contact {
+  flex: 1;
+  max-width: 300px;
+}
+
+.footer-contact h4 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #bbb;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #bbb;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bfae;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-bottom p {
+  margin-top: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo-about, .footer-links, .footer-news, .footer-contact {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo-about h3 {
+    font-size: 24px;
+  }
+
+  .footer-links h4, .footer-news h4, .footer-contact h4 {
+    font-size: 18px;
+  }
+
+  .footer-links ul li a, .footer-news ul li a {
+    font-size: 14px;
+  }
+}

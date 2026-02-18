@@ -1,0 +1,16 @@
+// package com.example.prog.exception; 
+
+// public class DuplicateFileUploadException extends RuntimeException {
+//     public DuplicateFileUploadException(String message) {
+//         super(message);
+//     }
+// }
+
+
+package com.example.prog.exception;
+
+public class DuplicateFileUploadException extends RuntimeException {
+    public DuplicateFileUploadException(String message) {
+        super(message);
+    }
+}
